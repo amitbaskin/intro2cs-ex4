@@ -1,0 +1,132 @@
+amit.baskin
+312259013
+Amit Baskin
+
+
+=
+======================
+
+  no special comments  =
+======================
+
+
+
+
+I did not discuss the excercise with anyone
+
+
+###############################
+=   README for ex4   =
+###############################
+
+
+###############################
+Description: ex4.py:
+a program that executes the game "hangman"
+###############################
+
+
+the functions that are used in the program, are the following:
+
+
+update_word_pattern(word, pattern, letter) - 
+the function gets a word, the current pattern and a letter as parameters
+and returns an updated pattern that contains the letter
+    :param word: the word
+    :param pattern: the current pattern
+    :param letter: the letter
+    :return: updated pattern
+
+
+original_pattern(word)-
+the function returns a blank note ("_"), multiplied by the length of the given word
+    :param word: the given word
+    :return: a blank note ("_"), multiplied by the length of the given word
+
+
+run_single_game(words_list) - 
+the function gets a list of words from a file and runs the game itself
+    :param words_list: a list of words from a file
+    :return: graphic messages in context with the game progress
+
+
+run_multiple_games(words_list) - 
+the function ensures that the game will not be exited while another game shall be played
+    :param words_list: a list of words
+    :return: a beginning of another game or not if the user chooses not to
+
+
+character_in_word(word, pattern) - 
+the function checks whether or not every letter that in the pattern is in the word exactly in the same place
+    :param word: the word to be guessed
+    :param pattern: the pattern to be shown
+    :return: True if the check is positive and False if negative
+
+
+letter_in_guess_list(word, wrong_guess_list) - 
+the function checks whether the chosen letter is in the wrong guesses list
+    :param word: the word to be guessed
+    :param wrong_guess_list: a list of previous wrong guesses
+    :return: True if the check is positive and False if negative
+
+
+filter_words_list(words, pattern, wrong_guess_lst) - 
+the function filters the list of words according to a few conditions
+    :param words: the words to be filtered
+    :param pattern: the given pattern
+    :param wrong_guess_lst: the list of previous wrong guesses
+    :return: the filtered list of words
+
+
+max_char_count(words, pattern) -
+the functions tells which is the most popular letter
+    :param words: the given words
+    :param pattern: the given pattern
+    :return: the most popular letter
+
+
+letter_to_index(letter) - 
+the function returns the index of the given letter in an alphabet list
+        :param letter: the letter to be checked
+        :return: the index of the given letter in an alphabet list
+
+
+index_to_letter(index) - 
+thee function returns the letter corresponding to the given index
+        :param index: the given index
+        :return: the letter corresponding to the given index
+
+
+choose_letter(words, pattern) - 
+the function chooses the letter according to a few conditions
+    :param words: a list of words
+    :param pattern: the given pattern
+    :return: the chosen letter
+
+
+main() - 
+the function runs the game itself
+    :return: the game running
+
+
+
+
+
+###############################
+=   No Special Comments   =
+###############################
+
+
+
+
+
+A question:
+What would you need to change in your program in order to play the game with a list 
+of words in hebrew and with hebrew letters?
+
+Answer:
+The conditions for the non valid msg would be different.
+only letters within the ascii values of the hebrew letters should be accepted.
+The same conditions should be written to functions of the letter to index
+and index to letter so the letter in the function choose letter 
+will be chosen correctly.
